@@ -2,15 +2,15 @@ import React from 'react'
 
 const style = {
   wrapper: `relative`,
-  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://lh3.googleusercontent.com/ujepnqpnL0nDQIHsWxlCXzyw4pf01yjz1Jmb4kAQHumJAPrSEj0-e3ABMZlZ1HEpJoqwOcY_kgnuJGzfXbd2Tijri66GXUtfN2MXQA=s250')] before:bg-cover before:bg-center before:opacity-30 before:blur`,
+  container: `before:content-[''] before:bg-red-500 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-[url('https://img.freepik.com/free-photo/plain-smooth-maroon-paper-background_53876-128606.jpg?w=740')] before:bg-cover before:bg-center before:opacity-100`,
   contentWrapper: `flex h-screen relative justify-center flex-wrap items-center`,
   copyContainer: `w-1/2`,
-  title: `relative text-white text-[46px] font-semibold`,
-  description: `text-[#8a939b] container-[400px] text-2xl mt-[0.8rem] mb-[2.5rem]`,
+  title: `relative text-[#FFFFFF] text-[46px] font-semibold`,
+  description: `text-[#CDCDCD] container-[400px] text-2xl mt-[0.8rem] mb-[2.5rem]`,
   ctaContainer: `flex`,
-  accentedButton: ` relative text-lg font-semibold px-12 py-4 bg-[#2181e2] rounded-lg mr-5 text-white hover:bg-[#42a0ff] cursor-pointer`,
-  button: ` relative text-lg font-semibold px-12 py-4 bg-[#363840] rounded-lg mr-5 text-[#e4e8ea] hover:bg-[#4c505c] cursor-pointer`,
-  cardContainer: `rounded-[3rem]`,
+  accentedButton: ` hover:animate-bounce relative text-lg font-semibold px-10 py-4 bg-[#2181e2] rounded-lg mr-5 text-white cursor-pointer`,
+  button: ` hover:animate-bounce relative text-lg font-semibold px-12 py-4 bg-black rounded-lg mr-5 text-[#FFFFFF] cursor-pointer`,
+  cardContainer: `border-solid border-2 border-[#000000] rounded-[3rem] shadow-2xl`,
   infoContainer: `h-20 bg-[#313338] p-4 rounded-b-lg flex items-center text-white`,
   author: `flex flex-col justify-center ml-4`,
   name: ``,
@@ -24,38 +24,26 @@ const Hero = () => {
         <div className={style.contentWrapper}>
           <div className={style.copyContainer}>
             <div className={style.title}>
-              Discover, collect, and sell extraordinary NFTs
+              Search, List and Trade NFTs.
             </div>
             <div className={style.description}>
-              OpenSea is the world&apos;s first and largest NFT marketplace
+              Ocean of Art is an extraordinary NFT marketplace.
             </div>
             <div className={style.ctaContainer}>
-              <button className={style.accentedButton}>Explore</button>
+              <a href='/discover'>
+              <button className={style.accentedButton}>Discover</button>
+              </a>
+              <a href='/profile'>
               <button className={style.button}>Create</button>
+              </a>
             </div>
           </div>
           <div className={style.cardContainer}>
-            <img
+            <img class="hover:scale-110 transition duration-300 ease-in-out" alt="Louvre"
               className="rounded-t-lg"
-              src="https://lh3.googleusercontent.com/ujepnqpnL0nDQIHsWxlCXzyw4pf01yjz1Jmb4kAQHumJAPrSEj0-e3ABMZlZ1HEpJoqwOcY_kgnuJGzfXbd2Tijri66GXUtfN2MXQA=s550"
-              alt=""
+              src="https://i.postimg.cc/Px8Bw52h/photo1645978214.jpg"
+              
             />
-            <div className={style.infoContainer}>
-              <img
-                className="h-[2.25rem] rounded-full"
-                src="https://lh3.googleusercontent.com/qQj55gGIWmT1EnMmGQBNUpIaj0qTyg4YZSQ2ymJVvwr_mXXjuFiHJG9d3MRgj5DVgyLa69u8Tq9ijSm_stsph8YmIJlJQ1e7n6xj=s64"
-                alt=""
-              />
-              <div className={style.author}>
-                <div className={style.name}>Jolly</div>
-                <a
-                  className="text-[#1868b7]"
-                  href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/2324922113504035910649522729980423429926362207300810036887725141691069366277"
-                >
-                  hola-kanola
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>

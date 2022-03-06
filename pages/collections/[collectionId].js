@@ -46,9 +46,7 @@ const Collection = () => {
     if (!provider) return
 
     const sdk = new ThirdwebSDK(
-      provider.getSigner(),
-      'https://rinkeby.infura.io/v3/a464b9152d8c466c8a94a514fce8e837'
-    )
+      provider.getSigner(),    )
     return sdk.getNFTModule(collectionId)
   }, [provider])
 
@@ -66,11 +64,9 @@ const Collection = () => {
     if (!provider) return
 
     const sdk = new ThirdwebSDK(
-      provider.getSigner(),
-      'https://rinkeby.infura.io/v3/a464b9152d8c466c8a94a514fce8e837'
-    )
+      provider.getSigner()    )
     return sdk.getMarketplaceModule(
-      '0x93A771F7ce845C33381f677489cF21a5964EDD0b'
+      '0x10676fbA833d082558ee3d2f0db99F3A7408B6A5'
     )
   }, [provider])
 
